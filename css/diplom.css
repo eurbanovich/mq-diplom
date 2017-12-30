@@ -41,7 +41,7 @@ body {
 
 .wrap {
   min-width: 320px;
-  max-width: 1920px;
+  /* max-width: 1920px; */
 
   background: #ffffff;
 }
@@ -81,7 +81,7 @@ body {
   }
 }
 
-/*.top*/ .container {
+.container {
   display: flex;
   flex-wrap: wrap;
   width: 89%;
@@ -89,6 +89,12 @@ body {
   padding-bottom: 70px;
 
   justify-content: center;
+}
+
+@media (min-width: 1921px) {
+  .container {
+   max-width: 1560px;
+ }
 }
 
 @media (max-width: 640px) {
@@ -105,10 +111,15 @@ body {
   }
 }
 
+.top-logo {
+  height: 58px;
+
+  overflow: hidden;
+}
+
 @media (min-width: 961px) {
 
   .top .container {
-    max-width: 1560px;
     padding-top: 46px;
   }
 
@@ -145,21 +156,23 @@ body {
 }
 
 .top-header {
-  margin-top: 100px;
+  margin-top: 104px;
 }
 
 @media (max-width: 640px) {
 
   .top-header {
-    margin-bottom: 60px;
+    margin-bottom: 84px;
   }
 }
 
 @media (min-width: 641px) and (max-width: 960px) {
 
   .top-header {
-    margin-bottom: 246px;
+    margin-top: 156px;
+    margin-bottom: 298px;
     margin-left: 42px;
+
   }
 }
 
@@ -168,13 +181,16 @@ body {
   .top-header {
     width: 100%;
     margin-left: 15px;
-    margin-top: 183px;
-    margin-bottom: 156px;
+    margin-top: 256px;
+    margin-bottom: 217px;
   }
 }
 
 .top .container .top-caption {
+  display: inline-block;
+
   text-transform: uppercase;
+  font-weight: bold;
   letter-spacing: 1.5px;
 }
 
@@ -193,6 +209,7 @@ body {
 
   .top .container .top-caption {
     font-size: calc(4.72vw + 27.7px);
+    letter-spacing: 3.5px;
   }
 }
 
@@ -227,7 +244,7 @@ body {
 @media (min-width: 961px) {
 
   .top .container .top-caption:nth-child(2) {
-    text-align: end;
+    margin-left: 29%;
   }
 }
 
@@ -257,7 +274,22 @@ body {
 
 .top-button .link-button span {
   display: block;
+}
 
+@media (max-width: 640px) {
+
+  .top-button .link-button .content {
+    margin-left: 8px;
+    margin-right: 4px;
+  }
+
+  .top-button .link-button:nth-child(2) .content {
+    margin-left: 7px;
+    margin-right: 28px;
+  }
+}
+
+.top-button .text-selection {
   font-weight: bold;
 }
 
@@ -265,10 +297,12 @@ body {
   display: flex;
   width: 100%;
   margin-bottom: 15px;
+  padding: 5px 0;
 
+  justify-content: center;
+  align-items: center;
   text-decoration: none;
   text-transform: uppercase;
-  justify-content: center;
   letter-spacing: 0.4px;
 
   color: #ffffff;
@@ -288,18 +322,24 @@ body {
   .top-button .link-button {
     width: 310px;
     margin-bottom: 21px;
+    padding: 17px 0;
 
     font-size: 14px;
 
     border-radius: 35px;
   }
 
-  @media (min-width: 961px) {
-
-    .top-button .link-button {
-      margin-bottom: 38px;
-    }
+  .top-button .link-button .content  {
+    margin-left: 26px;
+    margin-right: 26px;
   }
+
+@media (min-width: 961px) {
+
+  .top-button .link-button {
+    margin-bottom: 38px;
+  }
+}
 
   .top-button .link-button:first-child {
     margin-right: 30px;
@@ -342,7 +382,7 @@ body {
 }
 
 .top-button .link-button .logo {
-  position: absolute;
+  /* position: absolute; */
 
   fill: #ffffff;
 }
@@ -350,8 +390,8 @@ body {
 @media (max-width: 640px) {
 
   .top-button .link-button .logo {
-    top: 4px;
-    left: 5px;
+    /* top: 4px;
+    left: 5px; */
 
     width: 24px;
   }
@@ -360,8 +400,8 @@ body {
 @media (min-width: 641px) {
 
   .top-button .link-button .logo {
-    top: 15px;
-    left: -29px;
+    /* top: 15px;
+    left: -29px; */
 
     width: 42px;
   }
@@ -370,7 +410,7 @@ body {
 @media (min-width: 961px) {
 
   .top-button .link-button .logo {
-    top: 10px;
+    /* top: 10px; */
 
     width: 48px;
   }
@@ -893,43 +933,26 @@ body {
 
 
 /* Раздел interaction */
+.container.interaction {
+  width: 100%;
+  padding-bottom: 0;
+}
 
-.interaction .list-item {
-  flex-wrap: wrap;
+.interaction-item {
+  width: 100%;
+  /* flex-wrap: wrap; */
 
   background-color: #ffffff;
 }
 
-.interaction-list .list-item:before {
-  color: #ffffff;
-  border-bottom: 4px solid #8f7bc8;
 
-  z-index: 1;
-}
-
-.interaction-list .list-item:after {
-  position: absolute;
-
-  background-color: #5e42b0;
-
-  content: '';
-}
-
-.interaction-view {
-  width: 100%;
-  height: calc(52vw + 185px);
-
-  background-repeat: no-repeat;
-  background-position: 50% 50%;
-  background-color: #f26163;
-  background-size: cover;
-}
-
-.interaction-list .list-item .wrapper {
+.interaction-item .wrapper {
   padding-top: 0px;
 }
 
 .interaction-header {
+  position: relative;
+  margin-bottom: 0;
   margin-bottom: 0;
 
   text-transform: uppercase;
@@ -938,25 +961,60 @@ body {
   color: #e7e7e7;
 }
 
+.interaction-header:before {
+  position: absolute;
+  display: inline-block;
+  font-size: 14px;
+  font-weight: bold;
+  color: #ffffff;
+  border-bottom: 4px solid #8f7bc8;
+  z-index: 1;
+}
+
+.interaction-item:first-child .interaction-header:before {
+  content: "01";
+}
+
+.interaction-item:nth-child(2) .interaction-header:before {
+  content: "02";
+}
+
+.interaction-item:last-child .interaction-header:before {
+  content: "03";
+}
+
+.interaction-header:after {
+  position: absolute;
+
+  background-color: #5e42b0;
+
+  content: '';
+}
+
 .interaction-content {
   font-size: 16px;
   letter-spacing: 0.8px;
   line-height: 1.3;
 }
-
-
-
 @media (max-width: 640px) {
 
-  .interaction-list .list-item:before {
-    top: 315px;
-    left: 14.6%;
+  .interaction-view img {
+    width: 100%;
+    /* height: calc(59vw + 189px); */
   }
 
-  .interaction-list .list-item:after {
-    top: 293px;
-    left: 6.1%;
-    top: 53%;
+  .interaction-header {
+    font-size: 28px;
+  }
+
+  .interaction-header:before {
+    top: -58px;
+    left: 27px;
+  }
+
+  .interaction-header:after {
+    top: -82px;
+    left: 1px;
 
     /* width: calc(10vw + 39px);
     height: calc(10vw + 39px); */
@@ -964,107 +1022,30 @@ body {
     height: 70px;
   }
 
-  .list-item:first-child .interaction-view {
-    background-image: url("../images/be-active-320.jpg");
-  }
-
-  .list-item:nth-child(2) .interaction-view {
-    background-image: url("../images/find-contact-320.jpg");
-  }
-
-  .list-item:last-child .interaction-view {
-    background-image: url("../images/work-it-320.jpg");
-  }
-
-  .interaction-header {
-    font-size: 28px;
-  }
-
-  .interaction-list .list-item:first-child  .wrapper {
+  .interaction-item:first-child  .wrapper {
     padding-bottom: 61px;
-  }
+    }
 
-  .interaction-list .list-item:last-child .wrapper {
-    padding-bottom: 50px;
-  }
-
-  .interaction-list .list-item:first-child .interaction-header {
-    margin-top: 24px;
-  }
-
-  .interaction-list .list-item .interaction-content {
-    margin-top: 13px;
-  }
-
-  .interaction-list .list-item:nth-child(2)  .wrapper {
+  .interaction-item:nth-child(2)  .wrapper {
     padding-bottom: 62px;
   }
 
-  .interaction-list .list-item:nth-child(2) .interaction-header,
-  .interaction-list .list-item:last-child .interaction-header {
-    margin-top: 27px;
-  }
-}
-
-@media (min-width: 641px) and (max-width: 960px) {
-
-  .interaction-list .list-item:before {
-    top: 538px;
-    left: 10%;
-
-    font-size: 24px;
+  .interaction-item:last-child .wrapper {
+    padding-bottom: 50px;
   }
 
-  .interaction-list .list-item:after {
-    top: 505px;
-    left: 4.3%;
-
-    width: 116px;
-    height: 116px;
+  .interaction-item:first-child .interaction-header {
+    margin-top: 21px;
   }
 
-  .interaction-list .list-item .wrapper {
-    width: 100%;
-    margin: 0 4%;
-  }
+  .interaction-item:nth-child(2) .interaction-header,
+  .interaction-item:last-child .interaction-header {
+    margin-top: 24px;
+    }
 
-  .list-item:first-child .interaction-view {
-    background-image: url("../images/be-active-768.jpg");
+  .interaction-item .interaction-content {
+    margin-top: 13px;
   }
-
-  .list-item:nth-child(2) .interaction-view {
-    background-image: url("../images/find-contact-768.jpg");
-  }
-
-  .list-item:last-child .interaction-view {
-    background-image: url("../images/work-it-768.jpg");
-  }
-
-  .interaction-list .list-item:first-child .wrapper {
-    padding-bottom: 72px;
-  }
-
-  .interaction-list .list-item:nth-child(2) .wrapper {
-    margin-bottom: 80px;
-  }
-
-  .interaction-list .list-item:last-child .wrapper {
-    margin-bottom: 84px;
-  }
-
-  .list-item:first-child .interaction-header {
-    margin-top: 62px;
-  }
-
-  .list-item .interaction-content {
-    margin-top: 8px;
-  }
-
-  .list-item:nth-child(2) .interaction-header,
-  .list-item:last-child .interaction-header  {
-    margin-top: 51px;
-  }
-
 }
 
 @media (min-width: 641px) {
@@ -1079,68 +1060,145 @@ body {
   }
 }
 
-@media (min-width: 961px) {
+@media (min-width: 641px) and (max-width: 960px) {
 
-  .interaction .list-item {
+  .interaction-view img {
+    width: 100%;
+  }
+
+  .interaction-item .wrapper {
+    width: 88%;
+    margin: 0 4%;
+  }
+
+  .interaction-item:first-child .wrapper {
+    padding-top: 58px;
+    padding-bottom: 72px;
+  }
+
+  .interaction-item:nth-child(2) .wrapper {
+    padding-top: 47px;
+    padding-bottom: 80px;
+  }
+
+  .interaction-item:last-child .wrapper {
+    padding-top: 47px;
+    padding-bottom: 82px;
+  }
+
+  .interaction-header:before {
+    top: -108px;
+    left: 46px;
+
+    font-size: 24px;
+  }
+
+  .interaction-header:after {
+    top: -141px;
+    left: 2px;
+
+    width: 116px;
+    height: 116px;
+  }
+
+  .interaction-header {
+    margin-top: 0;
+  }
+
+  .interaction-item .interaction-header {
+    margin-top: 0;
+  }
+
+  .interaction-item .interaction-content {
+    margin-top: 8px;
+    letter-spacing: 1.2px;
+  }
+}
+
+@media (min-width: 961px)  {
+
+  .interaction-item {
+    display: flex;
     flex-wrap: nowrap;
   }
 
   .interaction-view {
     width: 50%;
-    height: calc(15vw + 442px);
   }
 
-  .interaction-list .list-item:before {
-    top: 36%;
-    /* top: 264px; */
-    left: 49.5%;
+  .interaction-view img {
+    width: 100%;
+  }
+
+  .interaction-header:before {
     font-size: 24px;
   }
 
-  .interaction-list .list-item:after {
-    top: 29%;
-    left: 46%;
+  .interaction-item:first-child .interaction-header:before,
+  .interaction-item:last-child .interaction-header:before {
+    top: 32px;
+    left: -138px;
+  }
 
+  .interaction-item:nth-child(2) .interaction-header:before {
+    top: 33px;
+    right: -138px;
+  }
+
+  .interaction-header:after {
     width: 168px;
     height: 155px;
   }
 
-  .interaction-list .list-item .wrapper{
+  .interaction-item:first-child .interaction-header:after,
+  .interaction-item:last-child .interaction-header:after {
+    top: -23px;
+    left: -204px;
+  }
+
+  .interaction-item:nth-child(2) .interaction-header:after {
+    top: -23px;
+    right: -210px;
+  }
+
+  .interaction-item .wrapper{
     width: 37%;
     padding-top: 128px;
   }
 
-  .interaction-list .list-item:first-child .wrapper,
-  .interaction-list .list-item:last-child .wrapper {
+  .interaction-item:first-child .wrapper,
+  .interaction-item:last-child .wrapper {
     padding-right: 8%;
   }
 
-  .interaction-list .list-item:nth-child(2) .wrapper {
+  .interaction-item:nth-child(2) .wrapper {
     padding-left: 3%;
   }
 
-  .list-item:first-child .interaction-view {
-    background-image: url("../images/be-active-desktop.jpg");
-  }
-
-  .list-item:nth-child(2) .interaction-view {
-    background-image: url("../images/find-contact-desktop.jpg");
-
+  .interaction-item:nth-child(2) .interaction-view {
     order: 1;
   }
 
-  .list-item:last-child .interaction-view {
-    background-image: url("../images/work-it-desktop.jpg");
+  .interaction-item:first-child .interaction-header {
+    margin-bottom: 87px;
   }
 
-  .interaction-list .list-item:first-child .interaction-header,
-  .interaction-list .list-item:last-child .interaction-header {
-    padding-bottom: 60px;
+  .interaction-item:nth-child(2) .interaction-header {
+    margin-bottom: 47px;
   }
 
-  .interaction-list .list-item:nth-child(2) .interaction-header {
-    padding-bottom: 20px;
+  .interaction-item:last-child .interaction-header {
+    margin-bottom: 81px;
   }
+
+  .interaction-item:first-child .interaction-content,
+  .interaction-item:nth-child(2) .interaction-content {
+    padding-right: 22%;
+  }
+}
+
+@media (min-width: 1921px) {
+
 }
 /*Конец раздела interaction */
 
@@ -1154,7 +1212,7 @@ body {
 
 .footer-top {
   display: inline-block;
-  padding: 18px 11px 18px 11px;
+  padding: 11px;
 
   border-radius: 23%;
 
@@ -1172,11 +1230,12 @@ body {
   stroke: #ffffff;
 }
 
-.footer-header {
-
+.footer-header span {
+  display: block;
 }
 
 .footer-caption {
+  font-weight: bold;
   text-transform: uppercase;
   letter-spacing: 1.5px;
 }
@@ -1197,6 +1256,7 @@ body {
 
   .footer-top {
     width: 72px;
+    padding: 11px;
   }
 
   .footer-header {
@@ -1234,6 +1294,7 @@ body {
 @media (min-width: 641px) {
 
   .footer-top {
+    padding: 18px 11px 18px 11px;
     width: 129px;
   }
 
