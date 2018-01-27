@@ -902,21 +902,6 @@ body {
     height: 79rem;
   }
 
-  .players > .wrapper:after {
-    position: absolute;
-    top: 8.5%;
-    right: 41.5%;
-
-    font-size: 3.1rem;
-    font-weight: bold;
-    text-shadow: 2rem 1.7rem 0 rgba(145, 115, 230, 0.5), 47.7rem 26.5rem 0 rgba(145, 115, 230, 1);
-
-    color: rgb(145, 115, 230);
-
-    content: '+';
-    z-index: 1;
-  }
-
   .players .list-item:before {
     left: 17%;
 
